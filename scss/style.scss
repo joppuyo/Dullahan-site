@@ -1,0 +1,71 @@
+@import '../node_modules/normalize.css/normalize';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.section-upper, .section-lower {
+  min-height: 50vh;
+}
+
+.section-upper {
+  background-color: #ECF0F1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  h1 {
+    font-size: 42px;
+    font-weight: bold;
+  }
+  .centered {
+    padding: 40px;
+  }
+}
+
+.section-lower {
+  background-color: #2C3E50;
+  color: white;
+  display: flex;
+}
+
+.tagline {
+  font-size: 20px;
+}
+
+.section-lower-column {
+  width: 50%;
+  padding: 40px;
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-lower {
+    flex-flow: column;
+  }
+  .section-lower-column {
+    width: 100%;
+  }
+  .section-lower-column.first {
+    padding-bottom: 0;
+  }
+  .section-lower-column.last {
+    padding-top: 0;
+  }
+}
